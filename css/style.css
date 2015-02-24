@@ -22,7 +22,7 @@
     stroke-width: 1px;
 }
 
-.graph-body .line circle {
+.graph-body .line circle, .graph-body .line rect {
     opacity: 0.1;
 }
 

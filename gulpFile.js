@@ -20,7 +20,7 @@ function bundle(watching) {
         debug: watching,
         cache: {}, // required for watchify
         packageCache: {}, // required for watchify
-        fullPaths: watching // required to be true only for watchify
+        fullPaths: watchify // required to be true only for watchify
     });
     if (watching) {
         bundler = watchify(bundler);
@@ -52,7 +52,7 @@ gulp.task('browserify', function () {
 });
 
 gulp.task('watch', function () {
-    return bundle(true);
+    gulp.watch(['lib/**/*.js'], ['browserify']);
 });
 
 gulp.task('mocha-test', function () {
